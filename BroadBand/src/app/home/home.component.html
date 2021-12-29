@@ -1,0 +1,86 @@
+
+   
+<div class="Head">
+<nav class="Custom_Nav navbar navbar-expand-lg ">
+    <a class="logo-text navbar-brand" href="#">
+  
+      Flash <img src="https://img.icons8.com/office/40/000000/lightning-bolt.png"/> Internet
+    </a>
+  
+    <button class="navbar-toggler" type="button"
+            (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+  
+    <div class="nav-adj collapse navbar-collapse"
+         [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+  
+        <li class="nav-item">
+          <a class="nav-link" href="#">Plans</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav mr-auto">
+        <li class=" nav-item">
+        <button class="btn-click logIn" routerLink="/login">  Log In → </button>
+        </li>
+  
+        <li class="nav-item">
+          <button class="btn-click signUp" routerLink="/login"> Sign Up →</button>
+        </li>
+      
+      </ul>
+ 
+    </div>
+
+
+
+  </nav>
+
+</div>
+
+<section class="info">
+   <div class="hero-text col-md-4">
+    <div>
+      <div>
+
+          <h1 class="int-text" >Internet For <span class="int-text2"> Everyone !</span></h1>
+        
+          <p class="plan-text1">Unlimited High Speed Internet .</p>
+          <p class="plan-text2">
+          Experience the high-speed internet on  our existing Fiber broadband connection across multiple devices.
+          enjoy the fastest connection with the speed of up to 10 mbps,
+            say hello to faster downloads and good bye buffering.</p>
+            
+                <button class="btn-click conn"  routerLink="/login" >  Get Started → </button>
+      
+          
+        </div>
+      </div>
+    </div>
+  <div class="hero col-md-4">
+    <img class="hero-img" src="../../assets/hero2.png">
+  </div>
+
+  
+</section>
+
+
+
+<footer class="foot">
+  <div>
+    <p>Made by Rushikesh , Jayant & Ashvini.</p>
+  </div>
+
+  <div>
+     <a class="link" routerLink="/login">Log In </a>
+     <a class="link" routerLink="/login" >Sign Up </a> 
+  </div>
+</footer>
+
+

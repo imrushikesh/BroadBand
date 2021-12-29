@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+    .swal2-html-container{
+    visibility: hidden !important;
+  }
+  
+  #swal2-html-container{
+    visibility: hidden !important;
+  }
+

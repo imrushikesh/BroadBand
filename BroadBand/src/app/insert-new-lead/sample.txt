@@ -1,0 +1,60 @@
+                  <!-- <div class="email-login formGroup">
+                    <label  id="labels" for="email"> <b>👨🏻‍💼 Name </b></label>
+                    <input type="text"  formControlName='name' placeholder="Enter Name">
+                    <div class ='formGroup' *ngIf="insertForm.controls['name'].invalid && insertForm.controls['name'].touched" ></div>
+                    <span class='passAlt alert alert-danger' *ngIf="insertForm.controls['name'].errors?.['required']">Please Enter Name.</span>
+                    <span class='passAlt alert alert-danger' *ngIf="insertForm.controls['name'].errors?.['minlength']">Name should be min 8 letters.</span>
+                  </div> -->
+
+                  <!-- <div class="email-login formGroup">
+                    <label  id="labels" for="email"> <b>Gender </b></label>
+                    <input type="radio" value="male" formControlName='gender' id='male'>
+                    <label for="male"> Male</label>
+                    <input type="radio" value="female" formControlName='gender' id='female'>
+                    <label for="female"> Female</label>
+                    <div class ='formGroup' *ngIf="insertForm.controls['gender'].invalid && insertForm.controls['gender'].touched" ></div>
+                    <div class=' passAlt alert alert-danger' *ngIf="insertForm.controls['gender'].errors?.['required']">Select Gender.</div>
+                     </div> -->
+                  
+                    <!-- <div class="email-login formGroup">
+
+                    <label id="labels" for="address"><b> Address</b></label>
+                    <input id="pass_log_id" type="text" formControlName='address' placeholder="Enter Address"  > 
+                    <div class ='formGroup' *ngIf="insertForm.controls['address'].invalid && insertForm.controls['address'].touched" ></div>
+                    <div class='passAlt alert alert-danger' *ngIf="insertForm.controls['address'].errors?.['required']">Please Enter Address.</div>
+              
+                    </div> -->
+
+
+                    <!-- <div class="email-login formGroup">
+
+                      <label id="labels" for="email"><b> Email</b></label>
+                      <input id="pass_log_id" type="email" formControlName='email' placeholder="Enter Email"  > 
+                      <div class ='formGroup' *ngIf="insertForm.controls['email'].invalid && insertForm.controls['email'].touched" ></div>
+                      <div class='passAlt alert alert-danger' *ngIf="insertForm.controls['email'].errors?.['required']">Please Enter Email.</div>
+                      <div class ="passAlt text-danger" *ngIf="insertForm.controls['email'].errors?.['pattern']">Pleas Provide Valid Email e.g Jone@yahoo.com</div>
+                
+                      </div> -->
+
+
+                      <!-- <div class="email-login formGroup">
+                        <label  id="labels" for="phone"> <b> Mobile No. </b></label>
+                        <input type="text"  formControlName='phone' placeholder="Enter Mobile number">
+                        <div class ='formGroup' *ngIf="insertForm.controls['phone'].invalid && insertForm.controls['phone'].touched" ></div>
+                        <div class='passAlt alert alert-danger' *ngIf="insertForm.controls['phone'].errors?.['required']">Please Enter Mobile.</div>
+                         </div> -->
+
+
+                         <!-- <div class="email-login formGroup">
+                          <label  id="labels" for="createdby"> <b>Created By </b></label>
+                          <input type="text"  formControlName='createdby' placeholder="Enter Name of lead Creator">
+                          <div class ='formGroup' *ngIf="insertForm.controls['createdby'].invalid && insertForm.controls['createdby'].touched" ></div>
+                          <div class='passAlt alert alert-danger' *ngIf="insertForm.controls['createdby'].errors?.['createdby']">Please Enter Name.</div>
+                          <div class='passAlt alert alert-danger' *ngIf="insertForm.controls['createdby'].errors?.['createdby']">Name should be min 8 letters.</div>
+                        </div> -->
+<!-- 
+                         <div class="email-login formGroup">
+                          <label  id="labels" for="date"> <b> Date </b></label>
+                          <input  type="date"  formControlName='date' placeholder="MM/DD/YYY">  <div class ='formGroup' *ngIf="insertForm.controls['date'].invalid && insertForm.controls['date'].touched" ></div>
+                          <div class='passAlt alert alert-danger' *ngIf="insertForm.controls['date'].errors?.['required']">Please Choose Date.</div>
+                           </div> -->

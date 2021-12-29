@@ -1,0 +1,157 @@
+<div class="Head">
+    <nav class="Custom_Nav navbar navbar-expand-lg ">
+        <a class="logo-text navbar-brand" href="#">
+      
+          Flash <img src="https://img.icons8.com/office/40/000000/lightning-bolt.png"/> Internet
+        </a>
+      
+        <button class="navbar-toggler" type="button"
+                (click)="toggleNavbar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+      
+        <div class="nav-adj collapse navbar-collapse"
+             [ngClass]="{ 'show': navbarOpen }">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">About</a> -->
+            </li>
+      
+            <li class="nav-item">
+              <!-- <a class="nav-link" href="#">Plans</a> -->
+            </li>
+          </ul>
+    
+          <ul class="navbar-nav mr-auto">
+            <li class=" nav-item">
+                <button class="btn-click logIn" routerLink="/home"> <img style="width: 20px;filter:invert(100%)" src="https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/000000/external-logout-social-media-basic-1-sbts2018-mixed-sbts2018.png"/>  Log Out </button>
+            </li>
+      
+            <li class="nav-item">
+              <!-- <button class="btn-click signUp" routerLink="/login"> Sign Up →</button> -->
+            </li>
+          
+          </ul>
+     
+        </div>
+    
+    
+    
+      </nav>
+    
+    </div>
+    
+    <section class="info">
+
+     <div class="card admin-card">
+        <div class="card-block admin-block">
+            <div class="admin-pic">
+             <img  class="over-pic" src="../../assets/admin.png">   
+            </div>
+            
+          <h4 class="card-title">{{this.name | titlecase}}</h4>
+          <h6 class="card-subtitle ">Administrator</h6>
+          <a href="/admin?name=rushikesh" class="card-link"><img src="https://img.icons8.com/ios/30/000000/new-message.png"/></a>
+         
+        </div>
+      </div>
+
+
+
+        <div class="container">
+          <div class="row ">
+            <div class="col-md-6">
+              <div class="card cust-card">
+                <div class="card-block">
+                    <div class="admin-pic2">
+                        <img  class="over-pic" src="../../assets/cirEmps.png">   
+                       </div>
+                  <h4 class="card-title">Employee</h4>
+                  <h6 class="card-subtitle text-muted">Employee Information</h6>
+                  <p class="card-text p-y-1">Add new Employee into Team, Update Employee Data.</p>
+                  <button class="btn-click2" routerLink="/home">➜</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card cust-card">
+                <div class="card-block">
+                    <div class="admin-pic2">
+                        <img  class="over-pic" src="../../assets/cirTask.png">   
+                       </div>
+                  <h4 class="card-title">Task</h4>
+                  <h6 class="card-subtitle text-muted">Task Information</h6>
+                  <p class="card-text p-y-1">Assign Tasks, Update Task Data.</p>
+                  <button class="btn-click2" routerLink="/home">➜</button>
+                
+                </div>
+              </div>
+            </div>
+           
+          </div><br>
+
+          <div class="row">
+            <div class="col-md-4">
+                <div class="card cust-card">
+                  <div class="card-block">
+                    <div class="admin-pic2">
+                        <img  class="over-pic" src="../../assets/cirLead.png">   
+                       </div>
+                    <h4 class="card-title">Lead</h4>
+                    <h6 class="card-subtitle text-muted">Lead Information</h6>
+                    <p class="card-text p-y-1">Add New Leads,</p>
+                    <p class="card-text p-y-1"> Update Existing Leads.</p>
+                    <button class="btn-click2" routerLink="/leads">➜</button>
+                  </div>
+                </div>
+              </div>
+            <div class="col-md-4">
+              <div class="card cust-card">
+                <div class="card-block">
+                    <div class="admin-pic2">
+                        <img  class="over-pic" src="../../assets/cirOpp.png">   
+                       </div>
+                  <h4 class="card-title">Opportunity</h4>
+                  <h6 class="card-subtitle text-muted">Opportunity Information</h6>
+                  <p class="card-text p-y-1">Add New Opportunity,</p>
+                  <p class="card-text "> Update Opportunity Data.</p>
+                  <button class="btn-click2" routerLink="/home">➜</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card cust-card">
+                <div class="card-block">
+                    <div class="admin-pic2">
+                        <img  class="over-pic" src="../../assets/cirAcc.png">   
+                       </div>
+                  <h4 class="card-title">Account</h4>
+                  <h6 class="card-subtitle text-muted">Account Information</h6>
+                  <p class="card-text p-y-1">Create New Accounts, </p>
+                  <p  class="card-text p-y-1"> Update Existing Accounts.</p>
+                  <button class="btn-click2" routerLink="/home">➜</button>
+                </div>
+              </div>
+            </div>
+     
+          </div>
+        </div>
+
+    </section>
+    
+    
+    
+    <footer class="foot">
+      <div>
+        <p>Made by Rushikesh , Jayant & Ashvini.</p>
+      </div>
+    
+      <div>
+         <a class="link" routerLink="/home">← Log out  </a>
+         <!-- <a class="link" routerLink="/login" >Sign Up </a>  -->
+      </div>
+    </footer>
+    
+    

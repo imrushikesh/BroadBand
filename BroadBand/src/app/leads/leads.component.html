@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+
+<div class="Head">
+  <nav class="Custom_Nav navbar navbar-expand-lg ">
+      <a class="logo-text navbar-brand" href="#">
+        Flash <img src="https://img.icons8.com/office/40/000000/lightning-bolt.png"/> Internet
+      </a>
+    
+      <button class="navbar-toggler" type="button"
+              (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+    
+      <div class="nav-adj collapse navbar-collapse"
+           [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">About</a> -->
+          </li>
+    
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">Plans</a> -->
+          </li>
+        </ul>
+  
+        <ul class="navbar-nav mr-auto">
+          <li class=" nav-item">
+          <button class="btn-click logIn" routerLink="/home"> <img style="width: 20px;filter:invert(100%)" src="https://img.icons8.com/external-sbts2018-mixed-sbts2018/58/000000/external-logout-social-media-basic-1-sbts2018-mixed-sbts2018.png"/>  Log Out </button>
+          </li>
+    
+          <li class="nav-item">
+            <!-- <button class="btn-click signUp" routerLink="/login"> Sign Up →</button> -->
+          </li>
+        
+        </ul>
+   
+      </div>
+  
+  
+  
+    </nav>
+  
+  </div>
+
+
+
+
+<div class="body">
+
+  
+      
+
+
+ 
+<div class="menu">   
+  <div>
+  <!-- <button class="btn-click cta-btn2" routerLink="/addLead" routerLinkActive="active">Add Lead</button> -->
+  </div>
+  <div class="input">
+    <input type="text" class="form-control" placeholder="Search leads " [(ngModel)]="searchTerm">
+    <button class="add-btn btn-click cta-btn2" routerLink="/addLead" routerLinkActive="active"><img style="width: 30px;filter:invert(100%)" src="https://img.icons8.com/ios/50/000000/add.png"/> Add Lead</button>
+  </div>
+</div>
+
+
+
+
+<div class="info  table-responsive table-responsive-sm table-responsive-md  ">
+  <table class="table table-hover table-fixed">
+    <thead >
+      <tr>
+        <th style="width: 4%" ><img class="emj" src="https://img.icons8.com/external-gradak-royyan-wijaya/50/000000/external-identity-gradak-user-gradak-royyan-wijaya-12.png"/></th>
+        <th style="width: 9%"><img class="emj" src="https://img.icons8.com/ios-filled/50/000000/name.png"/>  Name </th>
+        <th style="width:9%"> <img class="emj" src="https://img.icons8.com/material-outlined/50/000000/gender-equality.png"/>  Gender</th>
+        <th style="width: 15%"><img class="emj" src="https://img.icons8.com/pastel-glyph/50/000000/home.png"/>  Address</th>
+        <th style="width: 15%"> <img class="emj" src="https://img.icons8.com/material-outlined/50/000000/mail.png"/>  Email</th>
+        <th sstyle="width: 9%"> <img class="emj"  src="https://img.icons8.com/ios/50/000000/smartphone.png"/>    Mobile</th>
+        <th style="width: 9%"> <img class="emj" src="https://img.icons8.com/ios-filled/50/000000/edit-user-male.png"/>  Reg.By</th>
+        <th style="width: 9%"><img class="emj" src="https://img.icons8.com/ios/50/000000/planner.png"/>  Date</th>
+        <th style="width:6%">  Edit</th>
+        <th style="width:6%">Delete</th>
+        <th style="width:6%">Convert</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr class="" *ngFor='let l of leads | filter:searchTerm ;let i=index; '>
+
+  
+      
+        <td class="col-1"> {{i+1}}</td> 
+        <!-- <td class="col-1">{{l.leadId}}</td>  -->
+        <td > {{l.leadName}}</td>
+        <td >{{l.leadGender}}</td>
+       <td > {{l.leadAddress}}</td>
+        <td>{{l.leadEmail}}</td>
+       <td> {{l.leadPhone}}</td>
+       <td > {{l.leadCreatedBy}}</td>
+      <td >  {{l.leadCreatedOn}}</td>
+      <td ><button  class="btn-click2  btn-primary" (click)='edit(l.leadId,l.leadName,l.leadGender,l.leadAddress,l.leadEmail,l.leadPhone,l.leadCreatedBy,l.leadCreatedOn)'  > <img  class ="emj2" src="https://img.icons8.com/dotty/50/000000/edit.png"/></button></td>
+      <td><button class="btn-click2  btn-primary" (click)='delete(l.leadId)'><img class="emj2" src="https://img.icons8.com/dotty/50/000000/filled-trash.png"/></button></td>
+      <td><button class="btn-click2  btn-primary" (click)='delete(l.leadId)'><img class="emj2"  src="https://img.icons8.com/dotty/80/000000/edit-file.png"/></button></td>
+      </tr>
+    <!-- </ng-template> -->
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+<footer class="foot">
+  <div>
+    <p>Made by Rushikesh, Jayant & Ashvini.</p>
+  </div>
+
+  <div>
+     <a class="link" routerLink="/home"> ← Log out  </a>
+     <!-- <a class="link" routerLink="/login" >Sign Up </a>  -->
+  </div>
+</footer>

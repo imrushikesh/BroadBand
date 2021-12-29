@@ -1,0 +1,188 @@
+<body>
+
+    <!-- <header class="Header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid justify-content-center">
+              <img src="https://img.icons8.com/dotty/50/000000/globe.png" style="width: 30px; height:30px;"/> 
+        <h1 class="navbar-brand Company_title">
+        <span class="cmp_name">  Hi.Tech.BroadBand</span></h1>
+    </div>
+    </nav>
+    </header> -->
+
+    <div class="Head">
+      <nav class="Custom_Nav navbar navbar-expand-lg ">
+          <a class="logo-text navbar-brand" href="#">
+            Flash <img src="https://img.icons8.com/office/40/000000/lightning-bolt.png"/> Internet
+          </a>
+        
+          <button class="navbar-toggler" type="button"
+                  (click)="toggleNavbar()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+        
+          <div class="nav-adj collapse navbar-collapse"
+               [ngClass]="{ 'show': navbarOpen }">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <!-- <a class="nav-link" href="#">About</a> -->
+              </li>
+        
+              <li class="nav-item">
+                <!-- <a class="nav-link" href="#">Plans</a> -->
+              </li>
+            </ul>
+      
+            <ul class="navbar-nav mr-auto">
+              <li class=" nav-item">
+              <button class="btn-click logIn" routerLink="/leads"> ← Back </button>
+              </li>
+        
+              <li class="nav-item">
+                <!-- <button class="btn-click signUp" routerLink="/login"> Sign Up →</button> -->
+              </li>
+            
+            </ul>
+       
+          </div>
+      
+      
+      
+        </nav>
+      
+      </div>
+
+  
+
+
+
+
+     
+    
+
+
+
+    <div class="main">
+        <div class="card col-md-3 col-sm-6 justify-content-center" >
+             <div class="img_top"></div>
+           <form [formGroup]="insertForm" >
+              <h2 class="title">Add Lead </h2>
+
+              <div class="email-login formGroup">
+                <label  id="labels" for="email"><img style="width: 20px"src="https://img.icons8.com/ios-filled/50/000000/name.png"/> Name </label>
+                <input type="text"  formControlName='name' placeholder="Enter Name">
+                <div class ='formGroup' *ngIf="(insertForm.controls['name'].dirty || insertForm.controls['name'].invalid) && insertForm.controls['name'].touched" >
+                <div class='alert text-danger' *ngIf="insertForm.controls['name'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Enter Name.</div>
+                <div class='alert text-danger' *ngIf="insertForm.controls['name'].errors?.['minlength']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Name should be min 4 letters.</div>
+              </div>
+              </div> 
+
+              <div class="row">
+                <div class="col-lg-6 col-sm-6 col-12">
+                  <div class="formGroup">
+                  <label  id="labels" for="email"> <img style="width: 20px" src="https://img.icons8.com/material-outlined/50/000000/gender-equality.png"/> Gender </label><br>
+                  <div class="gender email-login2">
+                    <input type="radio" value="male" formControlName='gender' id='male'>
+                    <label for="male"> Male</label>
+                    <input type="radio" value="female" formControlName='gender' id='female'>
+                    <label for="female"> Female</label>
+                    <input type="radio" value="other" formControlName='gender' id='other'>
+                    <label for="female"> Other</label>
+                  </div>
+                  </div>
+            
+                  <div class ='formGroup' *ngIf="(insertForm.controls['gender'].dirty ||insertForm.controls['gender'].invalid ) && insertForm.controls['gender'].touched" >
+                  <div class='alert text-danger' *ngIf="insertForm.controls['gender'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Select Gender.</div>
+                 </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12">
+                  <div class="email-login formGroup">
+
+                    <label id="labels" for="address"><img style="width: 20px" src="https://img.icons8.com/pastel-glyph/50/000000/home.png"/>  Address</label>
+                    <input id="pass_log_id" type="text" formControlName='address' placeholder="Enter Address"  > 
+                    <div class ='formGroup' *ngIf="(insertForm.controls['address'].dirty ||insertForm.controls['address'].invalid) && insertForm.controls['address'].touched" >
+                    <div class='alert text-danger' *ngIf="insertForm.controls['address'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Enter Address.</div>
+                  </div>
+                    </div>
+                </div>
+          
+              </div>
+    
+
+              <div class="row">
+
+                <div class="col-lg-6 col-sm-6 col-12">
+                  <div class="email-login formGroup">
+
+                    <label id="labels" for="email"><img style="width: 20px" src="https://img.icons8.com/material-outlined/50/000000/mail.png"/>  Email</label>
+                    <input id="pass_log_id" type="email" formControlName='email' placeholder="Enter Email"  > 
+                    <div class ='formGroup' *ngIf="(insertForm.controls['email'].dirty || insertForm.controls['email'].invalid) && insertForm.controls['email'].touched" >
+                    <div class='alert text-danger' *ngIf="insertForm.controls['email'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Enter Email.</div>
+                    <div class ="alert text-danger" *ngIf="insertForm.controls['email'].errors?.['pattern']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Pleas Provide Valid Email e.g User@mail.com</div>
+                  </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-sm-6 col-12">
+                  <div class="email-login formGroup">
+                    <label  id="labels" for="phone"><img style="width: 20px"  src="https://img.icons8.com/ios/50/000000/smartphone.png"/> Mobile No. </label>
+                    <input type="text"  formControlName='phone' placeholder="Enter Mobile number">
+                    <div class ='formGroup' *ngIf="(insertForm.controls['phone'].dirty || insertForm.controls['phone'].invalid) && insertForm.controls['phone'].touched" >
+                    <div class='alert text-danger' *ngIf="insertForm.controls['phone'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Enter Mobile.</div>
+                     </div>
+                    </div>
+                </div>
+              </div>
+
+
+              <div class="row">
+
+                <div class="col-md-6 col-sm-12 col-12">
+                  <div class="email-login formGroup">
+                    <label  id="labels" for="createdby"> <img style="width: 20px" src="https://img.icons8.com/ios-filled/50/000000/edit-user-male.png"/> Lead Registered By </label>
+                    <input type="text"  formControlName='createdby' placeholder="Enter Name">
+                    <div class ='formGroup' *ngIf="(insertForm.controls['createdby'].dirty || insertForm.controls['createdby'].invalid) && insertForm.controls['createdby'].touched" >
+                    <div class='alert text-danger' *ngIf="insertForm.controls['createdby'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Enter Name.</div>
+                    <!-- <div class='passAlt alert alert-danger' *ngIf="insertForm.controls['createdby'].errors?.['minlength']">Name should be min 8 letters.</div> -->
+                  </div>
+                </div>
+              </div>
+
+                
+                <div class="col-lg-6 col-sm-6 col-12">
+
+                  <div class="email-login formGroup">
+                    <label  id="labels" for="date"> <img style="width: 20px" src="https://img.icons8.com/ios/50/000000/planner.png"/>  Date </label>
+                    <input  type="date"  formControlName='date' placeholder="MM/DD/YYY">  <div class ='formGroup' *ngIf="(insertForm.controls['date'].dirty || insertForm.controls['date'].invalid) && insertForm.controls['date'].touched" >
+                    <div class='alert text-danger' *ngIf="insertForm.controls['date'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Choose Date.</div>
+                     </div>
+                    </div>
+                    </div >
+              </div>
+
+
+                <div class="card-body justify-content-center">
+                 <button class="btn-click cta-btn btn btn-primary" type="submit"   (click)='onSubmit()' [disabled]="insertForm.invalid"  routerLink="/leads"  routerLinkActive="active" >Submit ➜ </button> 
+                </div>
+
+   
+           </form>
+        </div>
+
+ </div>
+<!-- {{this.insertForm.value |json}} -->
+
+</body>
+
+
+<footer class="foot">
+  <div>
+    <p>Made by Rushikesh, Jayant & Ashvini.</p>
+  </div>
+
+  <div>
+     <a class="link" routerLink="/leads"> ← Back  </a>
+     <!-- <a class="link" routerLink="/login" >Sign Up </a>  -->
+  </div>
+</footer>

@@ -1,0 +1,123 @@
+
+
+<body>
+ <!-- <header class="Header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid justify-content-center">
+              <img src="https://img.icons8.com/dotty/50/000000/globe.png" style="width: 30px; height:30px;"/> 
+        <h1 class="navbar-brand Company_title">
+        <span class="cmp_name">  Hi.Tech.BroadBand</span></h1>
+    </div>
+    </nav>
+    </header> -->
+
+<!-- now -->
+
+<div class="Head">
+  <nav class="Custom_Nav navbar navbar-expand-lg ">
+      <a class="logo-text navbar-brand" href="#">
+    
+        Flash <img src="https://img.icons8.com/office/40/000000/lightning-bolt.png"/> Internet
+      </a>
+    
+      <button class="navbar-toggler" type="button"
+              (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+    
+      <div class="nav-adj collapse navbar-collapse"
+           [ngClass]="{ 'show': navbarOpen }">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link" href="#">Plans</a>
+          </li>
+        </ul>
+  
+        <ul class="navbar-nav mr-auto">
+          <li class=" nav-item">
+          <button class="btn-click logIn" routerLink="/home"> ← Home </button>
+          </li>
+    
+          <li class="nav-item">
+            <!-- <button class="btn-click signUp" routerLink="/login"> Sign Up →</button> -->
+          </li>
+        
+        </ul>
+   
+      </div>
+  
+  
+  
+    </nav>
+  
+  </div>
+
+<!-- log in form  -->
+    <div class="main">
+        <div class="card col-md-3 col-sm-6 justify-content-center" >
+          <div class="card-body">
+           <form [formGroup]="loginForm" class="row g-3">
+              <h2 class="title"> Log In</h2>
+
+                <div class="card-body justify-content-center">
+                  <div class="email-login formGroup">
+                    <label  id="labels" for="email"><img style="width: 20px"src="https://img.icons8.com/ios/20/000000/user--v3.gif"/>  Username </label>
+                    <input type="text"  formControlName='userName'  placeholder="Enter username">
+                    <div class ='formGroup' *ngIf="(loginForm.controls['userName'].dirty 
+                            || loginForm.controls['userName'].touched) && loginForm.controls['userName'].invalid " >
+                          <p class='alert text-danger ' *ngIf="loginForm.controls['userName'].errors?.['required']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Enter Name.</p>
+                          <p class='alert text-danger' *ngIf="loginForm.controls['userName'].errors?.['minlength']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Name should be min 4 letters.</p>
+                  </div>
+                </div>
+                  
+                    <div class="email-login formGroup">
+
+                    <label id="labels" for="psw"><img style="width: 20px" src="https://img.icons8.com/ios-glyphs/20/000000/password--v2.gif"/> Password</label>
+                    <input id="pass_log_id" type="password" formControlName='passWord' placeholder="Enter Password"  >
+                  
+                    <div class ='formGroup' *ngIf="(loginForm.controls['passWord'].dirty || loginForm.controls['passWord'].touched) && loginForm.controls['passWord'].invalid " >
+                            <div class=' alert text-danger ' *ngIf="loginForm.controls['passWord'].errors?.['required']"> <img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Please Enter Password.</div>
+                            <div class=' alert text-danger' *ngIf="loginForm.controls['passWord'].errors?.['minlength']"><img style="width: 20px" src="https://img.icons8.com/color/48/000000/box-important--v3.gif"/>  Password should be min. 8 letters.</div>
+                    </div>
+                 </div>
+                
+                
+                  <button class="btn-disable btn-click cta-btn btn btn-primary" type="submit"   (click)='onSubmit()' [disabled]=loginForm.invalid  >Log In ➜ </button> 
+
+                
+                </div>
+
+
+           </form>
+
+        </div>
+    </div>
+ </div>
+
+
+<!-- {{loginForm.value|json}} -->
+
+
+
+
+</body>
+
+
+<footer class="foot">
+  <div>
+    <p>Made by Rushikesh, Jayant & Ashvini.</p>
+  </div>
+
+  <div>
+     <a class="link" routerLink="/home"> ← Home  </a>
+     <!-- <a class="link" routerLink="/login" >Sign Up </a>  -->
+  </div>
+</footer>
+
+
+
